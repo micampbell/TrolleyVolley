@@ -1,0 +1,110 @@
+﻿<Window x:Name="window" x:Class="TrolleyVolley.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TrolleyVolley"
+        mc:Ignorable="d"
+        Title="Trolley Volley" Height="350" Width="525">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="185"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid x:Name="offenseGrid" Background="CornflowerBlue">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition Width="2*"/>
+            </Grid.ColumnDefinitions>
+            <ListBox Grid.Column="6" x:Name="offenseRerolls"  Margin="16" HorizontalAlignment="Left" Height="99" VerticalAlignment="Bottom" Width="24"/>
+            <Button Grid.Column="6" x:Name="offenseDoneButton" Content="Done" HorizontalAlignment="Right" Height="47" VerticalAlignment="Bottom" Width="51" Click="offenseDoneButton_Click"/>
+            <Border Grid.Column="6" HorizontalAlignment="Stretch" Height="46" Margin="0,10,0,0" VerticalAlignment="Top" BorderBrush="White" BorderThickness="6" CornerRadius="6" >
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch">
+                    <Label Background="CornflowerBlue" HorizontalAlignment="Stretch" x:Name="blueScoreLabel" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20" FontWeight="Bold" Width="60" />
+                    <Label Background="PaleVioletRed" HorizontalAlignment="Stretch" x:Name="redScoreLabel" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20" FontWeight="Bold" Width="60"/>
+                </StackPanel>
+            </Border>
+            <StackPanel Orientation="Vertical" VerticalAlignment="Bottom">
+                <Button Content="1"  x:Name="one1Button" Margin="3" Height="40" VerticalAlignment="Bottom" Width="40" Tag="1" Click="offenseDiceButton_Click" />
+                <Button Content="1"  x:Name="one2Button" Margin="3" Height="40" VerticalAlignment="Bottom" Width="40" Tag="1" Click="offenseDiceButton_Click"  />
+                <Button Content="1"  x:Name="one3Button" Margin="3" Height="40" VerticalAlignment="Bottom" Width="40" Tag="1" Click="offenseDiceButton_Click"  />
+                <Button Content="1"  x:Name="one4Button" Margin="3" Height="40" VerticalAlignment="Bottom" Width="40" Tag="1" Click="offenseDiceButton_Click"  />
+            </StackPanel>
+            <StackPanel Grid.Column="1" Orientation="Vertical" VerticalAlignment="Bottom">
+                <Button Content="2" x:Name="two1Button" Margin="3" Height="40" VerticalAlignment="Bottom" Width="40" Tag="2" Click="offenseDiceButton_Click"  />
+                <Button Content="2" x:Name="two2Button" Margin="3" Height="40" VerticalAlignment="Bottom" Width="40" Tag="2" Click="offenseDiceButton_Click"  />
+                <Button Content="2" x:Name="two3Button" Margin="3" Height="40" VerticalAlignment="Bottom" Width="40" Tag="2" Click="offenseDiceButton_Click"  />
+                <Button Content="2" x:Name="two4Button" Margin="3" Height="40" VerticalAlignment="Bottom" Width="40" Tag="2" Click="offenseDiceButton_Click"  />
+            </StackPanel>
+            <StackPanel Grid.Column="2" Orientation="Vertical" VerticalAlignment="Bottom">
+                <Button Content="3" x:Name="three1Button" Margin="3" Height="40" VerticalAlignment="Bottom" Width="40" Tag="3" Click="offenseDiceButton_Click" />
+                <Button Content="3" x:Name="three2Button" Margin="3" Height="40" VerticalAlignment="Bottom" Width="40" Tag="3" Click="offenseDiceButton_Click"  />
+                <Button Content="3" x:Name="three3Button" Margin="3" Height="40" VerticalAlignment="Bottom" Width="40" Tag="3" Click="offenseDiceButton_Click"  />
+                <Button Content="3" x:Name="three4Button" Margin="3" Height="40" VerticalAlignment="Bottom" Width="40" Tag="3" Click="offenseDiceButton_Click"  />
+            </StackPanel>
+            <StackPanel Grid.Column="3" Orientation="Vertical" VerticalAlignment="Bottom">
+                <Button Content="4" x:Name="four1Button" Margin="3" Height="40" VerticalAlignment="Bottom" Width="40" Tag="4" Click="offenseDiceButton_Click" />
+                <Button Content="4" x:Name="four2Button" Margin="3" Height="40" VerticalAlignment="Bottom" Width="40" Tag="4" Click="offenseDiceButton_Click"  />
+                <Button Content="4" x:Name="four3Button" Margin="3" Height="40" VerticalAlignment="Bottom" Width="40" Tag="4" Click="offenseDiceButton_Click"  />
+                <Button Content="4" x:Name="four4Button" Margin="3" Height="40" VerticalAlignment="Bottom" Width="40" Tag="4" Click="offenseDiceButton_Click"  />
+            </StackPanel>
+            <StackPanel Grid.Column="4" Orientation="Vertical" VerticalAlignment="Bottom">
+                <Button Content="5" x:Name="five1Button" Margin="3" Height="40" VerticalAlignment="Bottom" Width="40" Tag="5" Click="offenseDiceButton_Click"  />
+                <Button Content="5" x:Name="five2Button" Margin="3" Height="40" VerticalAlignment="Bottom" Width="40" Tag="5" Click="offenseDiceButton_Click"  />
+                <Button Content="5" x:Name="five3Button" Margin="3" Height="40" VerticalAlignment="Bottom" Width="40" Tag="5" Click="offenseDiceButton_Click"  />
+                <Button Content="5" x:Name="five4Button" Margin="3" Height="40" VerticalAlignment="Bottom" Width="40" Tag="5" Click="offenseDiceButton_Click"  />
+            </StackPanel>
+            <StackPanel Grid.Column="5" Orientation="Vertical" VerticalAlignment="Bottom">
+                <Button Content="6" x:Name="six1Button" Margin="3" Height="40" VerticalAlignment="Bottom" Width="40" Tag="6" Click="offenseDiceButton_Click"  />
+                <Button Content="6" x:Name="six2Button" Margin="3" Height="40" VerticalAlignment="Bottom" Width="40" Tag="6" Click="offenseDiceButton_Click"  />
+                <Button Content="6" x:Name="six3Button" Margin="3" Height="40" VerticalAlignment="Bottom" Width="40" Tag="6" Click="offenseDiceButton_Click"  />
+                <Button Content="6" x:Name="six4Button" Margin="3" Height="40" VerticalAlignment="Bottom" Width="40" Tag="6" Click="offenseDiceButton_Click"  />
+            </StackPanel>
+        </Grid>
+        <Grid Grid.Row="1" x:Name="defenseGrid" Background="PaleVioletRed">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition Width="2*" />
+            </Grid.ColumnDefinitions>
+            <ListBox Grid.Column="6" x:Name="defenseRerolls" Margin="16" HorizontalAlignment="Left" Height="99" VerticalAlignment="Bottom" Width="24"/>
+            <Button Grid.Column="6" x:Name="defenseRollButton" Content="Roll!" HorizontalAlignment="Right" Height="47" VerticalAlignment="Bottom" Width="51" Click="defenseRollButton_Click"/>
+            <StackPanel Orientation="Vertical">
+                <Button Content="1"  x:Name="one5Button" Margin="3" Height="40" VerticalAlignment="Bottom" Width="40" Tag="1" Click="defenseDiceButton_Click"  />
+                <Button Content="1"  x:Name="one6Button" Margin="3" Height="40" VerticalAlignment="Bottom" Width="40" Tag="1" Click="defenseDiceButton_Click"  />
+            </StackPanel>
+            <StackPanel Grid.Column="1" Orientation="Vertical">
+                <Button Content="2" x:Name="two5Button" Margin="3" Height="40" VerticalAlignment="Bottom" Width="40" Tag="2" Click="defenseDiceButton_Click"  />
+                <Button Content="2" x:Name="two6Button" Margin="3" Height="40" VerticalAlignment="Bottom" Width="40" Tag="2" Click="defenseDiceButton_Click"  />
+            </StackPanel>
+            <StackPanel Grid.Column="2" Orientation="Vertical">
+                <Button Content="3" x:Name="three5Button" Margin="3" Height="40" VerticalAlignment="Bottom" Width="40" Tag="3" Click="defenseDiceButton_Click"  />
+                <Button Content="3" x:Name="three6Button" Margin="3" Height="40" VerticalAlignment="Bottom" Width="40" Tag="3" Click="defenseDiceButton_Click"  />
+            </StackPanel>
+            <StackPanel Grid.Column="3" Orientation="Vertical">
+                <Button Content="4" x:Name="four5Button" Margin="3" Height="40" VerticalAlignment="Bottom" Width="40" Tag="4" Click="defenseDiceButton_Click"  />
+                <Button Content="4" x:Name="four6Button" Margin="3" Height="40" VerticalAlignment="Bottom" Width="40" Tag="4" Click="defenseDiceButton_Click"  />
+            </StackPanel>
+            <StackPanel Grid.Column="4" Orientation="Vertical">
+                <Button Content="5" x:Name="five5Button" Margin="3" Height="40" VerticalAlignment="Bottom" Width="40"  Tag="5" Click="defenseDiceButton_Click" />
+                <Button Content="5" x:Name="five6Button" Margin="3" Height="40" VerticalAlignment="Bottom" Width="40" Tag="5" Click="defenseDiceButton_Click"  />
+            </StackPanel>
+            <StackPanel Grid.Column="5" Orientation="Vertical">
+                <Button Content="6" x:Name="six5Button" Margin="3" Height="40" VerticalAlignment="Bottom" Width="40" Tag="6" Click="defenseDiceButton_Click"  />
+                <Button Content="6" x:Name="six6Button" Margin="3" Height="40" VerticalAlignment="Bottom" Width="40" Tag="6" Click="defenseDiceButton_Click"  />
+            </StackPanel>
+        </Grid>
+        <Border x:Name="ResultBorder" Margin="80,60,95,0.5" BorderThickness="8" CornerRadius="20" BorderBrush="White" Grid.Row="1">
+            <Label x:Name="ReportResult" Background="#AAFFFFFF" Content="xxxxx" HorizontalContentAlignment="Center" FontSize="36" VerticalContentAlignment="Bottom"  />
+        </Border>
+    </Grid>
+</Window>
